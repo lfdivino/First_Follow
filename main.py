@@ -122,5 +122,10 @@ first = acharFirst(gramaticaDesmontada, first)
 first = eliminarNaoTerminais(first)
 follow = montarFollow(gramaticaDesmontada, follow, first)
 
-print first
-print follow
+print "First:"
+for linha in first:
+    print linha + " : " + "{" + first[linha] + "}"
+
+print "\nFollow:"
+for linha in follow:
+    print linha + " : " + "{" + follow[linha] + "}"
